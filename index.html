@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Webpage</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+
+<body bgcolor="black">
+  <div class="container">
+    <div class="navbar">
+      <a href="index.html"><img src="Image/logo.png" class="logo"></a>
+      <nav>
+        <ul id="menu">
+          <li><a href="#">About</a></li>
+          <li><a href="contact_me.html" target="_blank">Contact Me</a></li>
+          <li><a href="cv.html" target="_blank">CV</a></li>
+          <li><a href="#">Others</a></li>
+        </ul>
+      </nav>
+      <img src="Image/menu.png" class="menu_icon" onclick="togglemenu()">
+    </div>
+    <div class="row">
+      <div class="col_1">
+        <h2>Meta Front-End Developer</h2>
+        <h3>Coding course</h3>
+        <p>Launch your career as a front-end developer. Build job-ready skills for an in-demand career and earn a
+          credential
+          from Meta. No degree or prior experience required to get started.</p>
+        <h4>$29.99</h4>
+        <button type="button" class="enroll" onclick="toggleform()">Enroll Now<img
+            src="Image/arrow.png"></button><br /><br />
+        <div class="enroll-data" id="enroll-data" style="visibility: hidden;">
+          <div class="card-container">
+            <div class="front">
+              <div class="name">
+                <label>MasterCard<a style="font-size: 10px;">®</a></label>
+              </div>
+              <div class="image">
+                <img src="Image/card-chip.png" alt="">
+                <img src="Image/MasterCard.png" alt="">
+              </div>
+              <div class="card-number-box">################</div>
+              <div class="flex-card">
+                <div class="box">
+                  <label>Card Holder</label>
+                  <div class="card-holder-box">full name</div>
+                </div>
+                <div class="box">
+                  <label>expires</label>
+                  <div class="expiry-date-box">yyyy/mm/dd</div>
+                </div>
+              </div>
+            </div>
+            <div class="back">
+              <div class="stripe"></div>
+              <div class="box">
+                <label>cvv</label>
+                <div class="cvv-box"> </div>
+                <img src="Image/MasterCard.png" alt="">
+              </div>
+            </div>
+          </div>
+          <form action="../PHP/dataEntry.php" method="POST">
+            <div class="input">
+              <label>Card Number</label><br />
+              <input type="text" maxlength="16" name="card-number" class="card-number" required /><br /><br />
+            </div>
+            <div class="input">
+              <label>Card Holder Name</label><br />
+              <input type="text" name="card-holder" class="card-holder" /><br /><br />
+            </div>
+            <div class="flex-card">
+              <div class="input">
+                <label>Expiry Date</label><br />
+                <input type="date" name="expiry-date" class="expiry-date" /><br /><br />
+              </div>
+              <div class="input">
+                <label>CVV</label><br />
+                <input type="text" maxlength="4" name="cvv" class="cvv" /><br /><br />
+              </div>
+            </div>
+            <button type="submit" name="submit">Submit</button>
+          </form>
+        </div>
+      </div>
+      <div class="col_2">
+        <img src="Image/right.png" class="right">
+      </div>
+    </div>
+    <div class="social_links">
+      <img src="Image/fb.png" class="one">
+      <img src="Image/ig.png" class="two">
+      <img src="Image/tw.png" class="three">
+    </div>
+  </div>
+  <div class="time" name="time" id="time" style="color: white;"><a></a></div>
+  <script>
+    let today = new Date().toLocaleDateString()
+    document.querySelector('.time').innerText = today;
+    document.querySelector('.card-number').oninput = () => {
+      document.querySelector('.card-number-box').innerText = document.querySelector('.card-number').value;
+    }
+    document.querySelector('.card-holder').oninput = () => {
+      document.querySelector('.card-holder-box').innerText = document.querySelector('.card-holder').value;
+    }
+    document.querySelector('.expiry-date').oninput = () => {
+      document.querySelector('.expiry-date-box').innerText = document.querySelector('.expiry-date').value;
+    }
+    document.querySelector('.cvv').onmouseenter = () => {
+      document.querySelector('.front').style.transform = 'perspective(1000px) rotateY(-180deg)';
+      document.querySelector('.back').style.transform = 'perspective(1000px) rotateY(0deg)';
+    }
+    document.querySelector('.cvv').onmouseleave = () => {
+      document.querySelector('.front').style.transform = 'perspective(1000px) rotateY(0deg)';
+      document.querySelector('.back').style.transform = 'perspective(1000px) rotateY(180deg)';
+    }
+    document.querySelector('.cvv').oninput = () => {
+      document.querySelector('.cvv-box').innerText = document.querySelector('.cvv').value;
+    }
+    var menu = document.getElementById("menu");
+    menu.style.maxHeight = "0px";
+    enroll.style.maxHeight = "0px";
+    function togglemenu() {
+      if (menu.style.maxHeight == "0px") {
+        menu.style.maxHeight = "130px";
+      }
+      else {
+        menu.style.maxHeight = "0px";
+      }
+    }
+    function toggleform() {
+
+      if (document.getElementById('enroll-data').style.visibility == 'hidden') {
+        document.getElementById('enroll-data').style.visibility = 'visible';
+      }
+      else {
+        document.getElementById('enroll-data').style.visibility = 'hidden';
+      }
+    }
+  </script>
+</body>
+
+</html>

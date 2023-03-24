@@ -1,0 +1,398 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+    padding-left: 8%;
+    padding-right: 8%;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.navbar {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 10vh;
+    cursor: pointer;
+    margin: 30px 0;
+}
+
+.menu_icon {
+    width: 5vh;
+    cursor: pointer;
+    display: none;
+}
+
+nav {
+    flex: 1;
+    text-align: right;
+}
+
+nav ul li {
+    list-style: none;
+    display: inline-block;
+    margin-right: 30px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: blueviolet;
+    font-size: 14px;
+    font-weight: bolder;
+}
+
+nav ul li a:hover {
+    font-weight: bold;
+    color: green;
+}
+
+.row {
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.col_1 {
+    flex-basis: 40%;
+    position: relative;
+    margin-left: 20px;
+}
+
+.col_1 h2 {
+    font-size: 54px;
+}
+
+.col_1 h3 {
+    font-size: 30px;
+    color: gray;
+    font-weight: 100;
+    margin: 20px 0 10px;
+}
+
+.col_1 p {
+    font-size: 16px;
+    color: gainsboro;
+    font-weight: 100;
+}
+
+.col_1 h4 {
+    font-size: 20px;
+    margin: 30px 0;
+}
+
+.container .row .col_1 .enroll {
+    width: 140px;
+    border: 0;
+    padding: 12px 10px;
+    outline: none;
+    color: aliceblue;
+    background: linear-gradient(to right, red, purple);
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.enroll img {
+    align-items: center;
+    width: 30px;
+    display: none;
+}
+
+.enroll:hover img {
+    display: block;
+}
+
+.enroll:hover {
+    display: flex;
+    justify-content: space-between;
+}
+
+.col_1::after {
+    content: '';
+    width: 8px;
+    height: 40%;
+    background: linear-gradient(red, purple);
+    position: absolute;
+    left: -30px;
+    top: 8px;
+}
+
+.enroll-data {
+    text-transform: uppercase;
+    min-height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    left: -30px;
+}
+
+.enroll-data form .input-box {
+    margin-top: 15px;
+}
+
+.enroll-data form {
+    padding-top: 150px;
+}
+
+.enroll-data form .flex-card {
+    display: flex;
+    gap: 15px;
+}
+
+.enroll-data .card-container {
+    margin-bottom: -80px;
+    position: relative;
+    width: 380px;
+    height: 250px;
+    padding-bottom: 2px;
+    padding-left: 50px;
+}
+
+.enroll-data .card-container .front {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: linear-gradient(10deg, purple, blue);
+    border-radius: 15px;
+    backface-visibility: hidden;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, .2);
+    transform: perspective(1000px) rotateY(0deg);
+    padding: 20px;
+}
+
+.enroll-data .card-container .front .name {
+    font-size: 20px;
+}
+
+.enroll-data .card-container .front .image {
+    display: flex;
+    align-items: left;
+    justify-content: space-between;
+    padding-top: 10px;
+    padding-left: -10%;
+}
+
+.enroll-data .card-container .front .image img {
+    height: 80px;
+}
+
+.enroll-data .card-container .front .card-number-box {
+    padding: 40px 0;
+    font-size: 25px;
+}
+
+.enroll-data .card-container .front .flex-card {
+    display: flex;
+    gap: 10px;
+}
+
+.enroll-data .card-container .front .flex-card .box:nth-child(1) {
+    margin-right: auto;
+}
+
+.enroll-data .card-container .front .flex-card .box {
+    font-size: 15px;
+}
+
+.enroll-data .card-container .back {
+    position: absolute;
+    width: 109%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: linear-gradient(10deg, blue, purple);
+    border-radius: 15px;
+    padding: 20px 0;
+    text-align: right;
+    backface-visibility: hidden;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, .2);
+    transform: perspective(1000px) rotateY(180deg);
+    transition: transform .4s ease-out;
+}
+
+.enroll-data .card-container .back .stripe {
+    background-color: black;
+    width: 100%;
+    margin: 10px 0;
+    height: 50px;
+}
+
+.enroll-data .card-container .back .box {
+    padding: 0 20px;
+}
+
+.enroll-data .card-container .back .box .cvv-box {
+    height: 50px;
+    padding: 10px;
+    margin-top: 5px;
+    color: black;
+    background: white;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.enroll-data .card-container .back .box img {
+    margin-top: 30px;
+    height: 30px;
+}
+
+.enroll-data button {
+    width: 100px;
+    border: 0;
+    padding: 12px 10px;
+    outline: none;
+    color: aliceblue;
+    background: linear-gradient(to right, blue, purple);
+    border-radius: 6px;
+    cursor: pointer;
+
+}
+
+.col_2 {
+    position: relative;
+    flex-basis: 60%;
+    display: flex;
+    align-items: center;
+}
+
+.col_2 .right {
+    margin-top: -250px;
+    width: 130vh;
+    height: 110vh;
+    transform: translateX(180px);
+}
+
+.social_links img {
+    height: 40px;
+    margin: 20px;
+    cursor: pointer;
+}
+
+.social_links {
+    text-align: center;
+}
+
+.time{
+    text-align: center;
+}
+
+@media only screen and (max-width:700px) {
+    nav ul {
+        width: 30%;
+        margin-bottom: 20px;
+        background: linear-gradient(purple, blue);
+        position: absolute;
+        top: 90px;
+        right: 0;
+        z-index: 1;
+    }
+
+    nav ul li {
+        display: block;
+    }
+
+    nav ul li a {
+        color: black;
+    }
+
+    .menu_icon {
+        display: block;
+    }
+
+    #menu {
+        overflow: hidden;
+        transition: 0.5s;
+    }
+
+    .row {
+        flex-direction: column-reverse;
+    }
+
+    .row .enroll-data form {
+        align-items: center;
+    }
+
+    .enroll-data .card-container {
+        width: 220px;
+        height: 150px;
+    }
+
+    .enroll-data .card-container .front .image img {
+        height: 40px;
+    }
+
+    .enroll-data .card-container .front .card-number-box {
+        padding: 20px 0;
+        font-size: 15px;
+    }
+
+    .enroll-data .card-container .front .flex-card .box {
+        font-size: 10px;
+    }
+
+    .enroll-data .card-container .back .stripe {
+        height: 35px;
+    }
+
+    .enroll-data .card-container .back .box {
+        padding: 0 20px;
+    }
+
+    .enroll-data .card-container .back .box .cvv-box {
+        height: 8px;
+    }
+
+    .enroll-data .card-container .back .box label {
+        font-size: 10px;
+    }
+
+    .enroll-data .card-container .back .box img {
+        height: 25px;
+    }
+
+    .col_1 {
+        flex-basis: 100%;
+    }
+
+    .col_1 h2 {
+        font-size: 30px;
+    }
+
+    .col_1 h3 {
+        font-size: 20px;
+    }
+
+    .col_1 p {
+        font-size: 10px;
+    }
+
+    .col_1 h4 {
+        font-size: 15px;
+    }
+
+    .col_2 {
+        flex-basis: 100%;
+        margin-bottom: 15px;
+    }
+
+    .col_2 .right {
+        margin-top: 10px;
+        margin-left: -200px;
+        width: 65vh;
+        height: 55vh;
+        -webkit-transform: scaleX(-1);
+        transform: scaleX(-1);
+    }
+
+}

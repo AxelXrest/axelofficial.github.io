@@ -1,0 +1,79 @@
+body {
+    background-image: url(Image/black_background.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    font-family: sans-serif;
+    align-items: center;
+    margin-left: 60%;
+}
+
+form {
+    background: linear-gradient(rgb(10, 10, 39), rgb(37, 9, 48));
+    border-radius: 20px;
+    width: 76%;
+    color: aliceblue;
+    margin: 20px;
+    padding: 20px;
+    border: none;
+}
+
+select{
+    color: aliceblue;
+    border: 2px solid;
+    background: none;
+    border-radius: 5px;
+}
+
+select option{
+    background-color: black;
+}
+
+input {
+    color: aliceblue;
+    border: none;
+    background: none;
+    border-bottom: 2px solid;
+}
+
+input:checked+span {
+    border-color: black;
+    font-weight: bold;
+}
+
+.flex {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.small {
+    font-size: 12px;
+    color: gray;
+    font-weight: bold;
+}
+
+.heder {
+    color: aliceblue;
+    font-size: 30px;
+    margin: 30px;
+    align-content: center;
+    padding-left: 77px;
+}
+
+button {
+    width: 70px;
+    border: 0;
+    padding: 12px 10px;
+    outline: none;
+    color: aliceblue;
+    background: linear-gradient(to right, blue, purple);
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+textarea{
+    color: aliceblue;
+    background: none;
+    border-radius: 8px;
+    border: 2px solid;
+}

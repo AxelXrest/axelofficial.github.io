@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Curriculum Vitae</title>
+	</head>
+	<style>
+		body{
+		background-color: gray;
+		font-family: sans-serif;
+		margin: 0 200px;
+		}
+		.head{
+		border: 5px solid;
+		border-color: white;
+		border-left: none;
+		background-color: blue;
+		padding: 15px;
+		color: white;
+		width: 300%;
+		}
+		.icon{
+		border: none;
+		}
+		.flex{
+		display: flex;
+		flex-type: column;
+		}
+		.left{
+		background-color: black;
+		color: white;
+		padding: 10px;
+		padding-right: 40px;
+		width: 30%;
+		border: 5px solid;
+		border-top: none;
+		border-color: white;
+		}
+		.right{
+		background-color: white;
+		color: black;
+		padding: 10px;
+		padding-left: 40px;
+		width: 70%;
+		border: 5px solid;
+		border-top: none;
+		border-color: white;
+		}
+		.highlight{
+		text-align: center;
+		background-color: purple;
+		width: 35%;
+		color: white;
+		}
+		img{
+		border: 5px solid;
+		border-color: white;
+		border-right: none;
+		}
+		a{
+		color: white;
+		position: relative;
+		border-bottom: 1px black;
+		}
+		a:before{
+		content: attr(data-hover);
+		visibility: hidden;
+		opacity: 0;
+		width: 140px;
+		background-color: black;
+		color: #fff;
+		text-align: center;
+		border-radius: 5px;
+		padding: 5px 0;
+		position: absolute;
+		z-index: 1;
+		left: 0;
+		top: 110%;
+		}
+		a:hover:before{
+		opacity: 1;
+		visibility: visible;
+		}
+		h1{
+		font-weight: bold;
+		text-align: center;
+		margin-top: 10px;
+		color: white;
+		}
+	</style>
+	<body>
+		<h1>Curriculum Vitae</h1>
+		<div class="flex">
+				<img src="Image\pic.jpg" alt="Image" height="25%" width="25%">
+			<div class="head">
+				<h2>Ajay Nemkul Shrestha</h2>
+				<p><img class="icon" src="Image\iconPhone.png" alt="Icon" height="2%" width="2%">&nbsp+977 - 9843415230</p>
+				<p><img class="icon" src="Image\iconMail.png" alt="Icon" height="2%" width="2%">&nbsp<a  href="contact_me.html"
+				target="_blank" data-hover="Click here to contact me.">axelxrest@gmail.com</a>
+			</div>
+		</div>	
+		<div class="flex">
+			<div class="left">
+				<h2>Language</h2>
+				<p><i>English</p>
+				<p>Nepali</p>
+				<p>Hindi</p>
+				<h2>Qualities</i></h2>
+				<p>
+					<ul>
+						<li>Communication:<br>Explaining products to customer, responding to complaints effectively and handling the queries by phone, email or live chat.</li>
+						<br>
+						<li>Attention to details:<br>Processing transactions correctly and monitoring stocks accurately.</li>
+						<br>
+						<li>Technical:<br>Operating electronics efficiently and properly.</li>
+						<br>
+						<li>Positive thinking</li>
+						<br>
+						<li>Time management</li>
+						<br>
+						<li>Ability to perform under pressure</li>
+						<br>
+						<li>A keen desire to learn new things and achieve success</li>
+						<br>
+						<li>Can confidently face the challenges assigned task</li>
+					</ul>	
+				</p>	
+			</div>			
+			<div class="right">
+				<h2 class="highlight">Career Objective</h2>
+				<p>Am willing to face any interview committee which you feel fit, in order to explain any interest and my capabilities in holding the position, I will be grateful if you give me the opportunity to be a part of your most respective organization,<br><br>
+				I shall spare no pain to give you complete satisfaction in the discharge of duties. My objective is to secure a responsible job in a place where I can implement what I have learned and studies, as well as developing my knowledge and gain further experience.<br><br>
+				I shall be placed to furnish any other information that may desire at the time of the interview and am happy to be interviewed at your convenience.</p>
+				<h2 class="highlight">Education</h2>
+				<p><b>Bachelors of Computer Application(BCA) |</b> Vedas College</p>
+				<p><b>+2 |</b> Milestone International Secondary School</p>
+				<p><b>SEE |</b> Anant English School</p>
+				<h2 class="highlight">Additional</h2>
+				<p><b>Hobbies & Interests</b><br>
+				Table Tennis, Running, Chess</p>
+				<p><b>Programming Language</b><br>
+				HTML, CSS, JAVA, C PROGRAMMING</p>
+				<p><b>Software</b><br>
+				Microsoft Office, Word, PowerPoint, Excel, Google Mail, Slack, Outlook</p>
+			</div>
+		</div>	
+	</body>
+</html>
+
+
+<!--Responsive(px,rem%,rm,@media), CSS Combinator Selectors-->
+<!-- !important;(override all property)-->
+<!--inline>internal>external>
+
